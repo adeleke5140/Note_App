@@ -1,0 +1,72 @@
+{
+  "name": "notedly-web",
+  "version": "1.0.0",
+  "description": "[WIP] Web code examples for JavaScript Everywhere by Adam Scott, published by O'Reilly Media",
+  "scripts": {
+    "start": "node src/App.js",
+    "dev": "parcel src/index.html --no-cache -p 3000",
+    "final": "parcel final/index.html",
+    "deploy:src": "parcel build src/index.html --public-url ./",
+    "deploy:final": "parcel build final/index.html --public-url ./",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javascripteverywhere/web.git"
+  },
+  "alias": {
+    "process": "process/browser.js"
+  },
+  "process": {
+    "global": "process"
+  },
+  "keywords": [],
+  "author": "Adam Scott <adam@jseverywhere.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/javascripteverywhere/web/issues"
+  },
+  "homepage": "https://github.com/javascripteverywhere/web#readme",
+  "dependencies": {
+    "@apollo/client": "^3.0.0-beta.24",
+    "@types/react": "^16.9.17",
+    "apollo-cache-inmemory": "^1.6.6",
+    "apollo-link-context": "1.0.19",
+    "date-fns": "1.30.1",
+    "dotenv": "^16.0.0",
+    "graphql": "^14.7.0",
+    "normalize.css": "8.0.1",
+    "process": "^0.11.10",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-markdown": "4.2.2",
+    "react-router-dom": "5.1.2",
+    "styled-components": "4.4.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@testing-library/cypress": "5.0.2",
+    "apollo-link": "^1.2.14",
+    "babel-loader": "^8.2.4",
+    "babel-plugin-styled-components": "1.10.6",
+    "babel-plugin-transform-inline-environment-variables": "^0.4.3",
+    "babel-plugin-transform-object-rest-spread": "6.26.0",
+    "babel-preset-react": "6.24.1",
+    "cypress": "3.6.1",
+    "eslint": "5.16.0",
+    "eslint-config-prettier": "5.1.0",
+    "eslint-plugin-cypress": "2.7.0",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-react": "7.16.0",
+    "eslint-plugin-react-hooks": "2.3.0",
+    "graphql-request": "^1.8.2",
+    "parcel": "^2.4.1",
+    "parcel-bundler": "1.12.4",
+    "parcel-plugin-nuke-dist": "^1.0.1",
+    "prettier": "1.19.1",
+    "test-data-bot": "0.8.0"
+  }
+}

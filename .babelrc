@@ -1,0 +1,6 @@
+{
+  "plugins": [
+    "babel-plugin-styled-components",
+    ["transform-inline-environment-variables", { "include": ["API_URL"] }]
+  ]
+}
