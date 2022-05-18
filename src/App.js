@@ -14,7 +14,7 @@ import GlobalStyle from './components/GlobalStyle';
 // import Routes
 import Pages from './pages/index';
 
-const uri = process.env.API_URI;
+const uri = API_URI;
 const httpLink = createHttpLink({ uri });
 const cache = new InMemoryCache();
 
