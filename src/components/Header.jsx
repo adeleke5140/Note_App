@@ -5,8 +5,6 @@ import logo from '../img/logo.svg';
 import { useQuery, gql } from '@apollo/client';
 import { Link, withRouter } from 'react-router-dom';
 import ButtonAsLink from './ButtonAsLink';
-// import { isLoggedIn } from '../pages/cache';
-// import { useReactiveVar } from '@apollo/client';
 
 const IS_LOGGED_IN = gql`
   {
@@ -37,7 +35,7 @@ const UserState = styled.div`
 `;
 
 const Header = () => {
-  const { data } = useQuery(IS_LOGGED_IN);
+  const { data, client } = useQuery(IS_LOGGED_IN);
   // const isLoggedIn = useReactiveVar(isLoggedIn);
 
   return (
