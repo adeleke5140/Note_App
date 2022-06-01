@@ -29,6 +29,10 @@ const NavList = styled.ul`
     font-weight: bold;
     font-size: 1.1em;
     color: #333;
+
+    @media (max-width: 467px) {
+      font-size: 0.8em;
+    }
   }
 
   a:visited {
@@ -37,7 +41,7 @@ const NavList = styled.ul`
 
   a:hover,
   a:focus {
-    color: #0077cc;
+    color: var(--primary-color);
   }
 `;
 

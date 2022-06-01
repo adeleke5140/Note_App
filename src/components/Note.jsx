@@ -26,6 +26,11 @@ const UserActions = styled.div`
   margin-left: auto;
 `;
 
+const Username = styled.span`
+  font-weight: 500;
+  color: var(--primary-color);
+`;
+
 const Note = ({ note }) => {
   const { loading, error, data } = useQuery(IS_LOGGED_IN);
 
@@ -44,7 +49,7 @@ const Note = ({ note }) => {
           />
         </MetaInfo>
         <MetaInfo>
-          <em>by</em> {note.author.username} <br />
+          <em>by</em> <Username>{note.author.username}</Username> <br />
           {format(note.createdAt, 'MMM Do YYYY')}
         </MetaInfo>
 

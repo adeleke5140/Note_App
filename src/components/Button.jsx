@@ -2,12 +2,11 @@ import styled from 'styled-components';
 
 const Button = styled.button`
   display: block;
-  padding: 10px;
+  padding: 0.6em 1em;
   border: none;
-  border-radius: 5px;
   font-size: 18px;
-  color: #fff;
-  background-color: #0077cc;
+  background-color: var(--primary-color);
+  color: var(--bg-color);
   cursor: pointer;
 
   :hover {

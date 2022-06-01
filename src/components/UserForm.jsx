@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import Button from './Button';
@@ -20,6 +20,17 @@ const Form = styled.form`
   input {
     width: 100%;
     margin-bottom: 1em;
+    border: none;
+    background: none;
+    border-bottom: 1px solid var(--primary-color);
+  }
+
+  input:focus-visible {
+    outline: none;
+  }
+
+  input:focus:not(:focus-visible) {
+    outline: none;
   }
 `;
 
@@ -35,7 +46,11 @@ const UserForm = props => {
 
   return (
     <Wrapper>
-      {props.formType === 'signup' ? <h2>Sign Up</h2> : <h2>Sign In</h2>}
+      {props.formType === 'signup' ? (
+        <h2 className="form-title">Sign Up</h2>
+      ) : (
+        <h2 className="form-title">Sign In</h2>
+      )}
 
       <Form
         onSubmit={e => {
@@ -49,35 +64,38 @@ const UserForm = props => {
       >
         {props.formType === 'signup' && (
           <React.Fragment>
-            <label htmlFor="username">Username:</label>
-            <input
-              type="text"
-              id="username"
-              name="username"
-              placeholder="username"
-              required
-              onChange={onChange}
-            />
+            <label htmlFor="username">
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="username"
+                required
+                onChange={onChange}
+              />
+            </label>
           </React.Fragment>
         )}
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Email"
-          onChange={onChange}
-          required
-        />
-        <label htmlFor="password">Password:</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="Password"
-          onChange={onChange}
-          required
-        />
+        <label htmlFor="email">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            onChange={onChange}
+            required
+          />
+        </label>
+        <label htmlFor="password">
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password"
+            onChange={onChange}
+            required
+          />
+        </label>
         <Button type="submit">Submit</Button>
       </Form>
     </Wrapper>

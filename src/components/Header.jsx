@@ -28,6 +28,11 @@ const LogoText = styled.h1`
   margin: 0;
   padding: 0;
   display: inline;
+  font-family: var(--font-family1);
+  color: var(--primary-color);
+  @media (max-width: 467px) {
+    font-size: 1.4em;
+  }
 `;
 
 const UserState = styled.div`
@@ -39,7 +44,7 @@ const Header = () => {
 
   return (
     <HeaderBar>
-      <img src={logo} alt="Notedly Logo" height="40" />
+      <img class="header-logo" src={logo} alt="Notedly Logo" height="40" />
       <LogoText>Notedly</LogoText>
 
       <UserState>
@@ -59,8 +64,12 @@ const Header = () => {
           </ButtonAsLink>
         ) : (
           <p>
-            <Link to={'/signin'}>Sign In</Link> or{' '}
-            <Link to={'/signup'}>Sign up</Link>
+            <Link className="navigable-link" to={'/signin'}>
+              Sign In{' '}
+            </Link>
+            <Link className="navigable-link" to={'/signup'}>
+              Sign up
+            </Link>
           </p>
         )}
       </UserState>
