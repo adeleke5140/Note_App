@@ -44,7 +44,7 @@ const Header = () => {
 
   return (
     <HeaderBar>
-      <img class="header-logo" src={logo} alt="Notedly Logo" height="40" />
+      <img className="header-logo" src={logo} alt="Notedly Logo" height="40" />
       <LogoText>Notedly</LogoText>
 
       <UserState>

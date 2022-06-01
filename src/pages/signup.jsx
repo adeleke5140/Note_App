@@ -12,7 +12,7 @@ const SIGNUP_USER = gql`
 
 const SignUp = props => {
   useEffect(() => {
-    document.title = 'Sign Up -- Notedly';
+    document.title = 'Sign Up -- Notes';
   });
 
   const client = useApolloClient();

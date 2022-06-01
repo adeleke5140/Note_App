@@ -6,7 +6,7 @@ import { GET_MY_NOTES } from '../gql/query';
 
 export default function MyNotes() {
   useEffect(() => {
-    document.title = 'My Notes -- Notedly';
+    document.title = 'My Notes -- Notes';
   });
 
   const { loading, error, data } = useQuery(GET_MY_NOTES, {

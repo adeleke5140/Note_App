@@ -7,7 +7,7 @@ import { GET_MY_FAVORITES } from '../gql/query';
 
 export default function Favorites() {
   useEffect(() => {
-    document.title = 'Favorites -- Notedly';
+    document.title = 'Favorites -- Notes';
   });
 
   const { loading, error, data } = useQuery(GET_MY_FAVORITES);

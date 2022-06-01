@@ -26,7 +26,7 @@ const NEW_NOTE = gql`
 
 const NewNote = props => {
   useEffect(() => {
-    document.title = 'New Note -- Notedly';
+    document.title = 'New Note -- Notes';
   });
 
   const [data, { loading, error }] = useMutation(NEW_NOTE, {

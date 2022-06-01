@@ -46,6 +46,7 @@ const Note = ({ note }) => {
             src={note.author.avatar}
             alt="{note.author.username} avatar"
             height="50px"
+            width="50px"
           />
         </MetaInfo>
         <MetaInfo>

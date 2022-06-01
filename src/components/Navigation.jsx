@@ -31,7 +31,7 @@ const NavList = styled.ul`
     color: #333;
 
     @media (max-width: 467px) {
-      font-size: 0.8em;
+      font-size: 0.9em;
     }
   }
 

@@ -27,7 +27,8 @@ export default createGlobalStyle`
       Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     background-color: var(--bg-color);
     line-height: 1.4;
-    font-family: var(--font-family1)
+    font-family: var(--font-family1);
+    font-display: swap;
   }
 
   button, input{
