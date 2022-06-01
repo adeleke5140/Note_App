@@ -36,7 +36,6 @@ const UserState = styled.div`
 
 const Header = () => {
   const { data, client } = useQuery(IS_LOGGED_IN);
-  // const isLoggedIn = useReactiveVar(isLoggedIn);
 
   return (
     <HeaderBar>
